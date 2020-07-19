@@ -1,0 +1,91 @@
+html, body {
+    background-color: #000;
+    background: url(img/banner1.jpg) no-repeat center fixed; -webkit-background-size: cover; background-size: cover;
+    overflow: hidden;
+
+}
+@media(max-width:768px) {
+    html, body {
+        background: url(img/banner1-mobile.jpg) no-repeat center fixed; -webkit-background-size: cover; background-size: cover;
+    }
+}
+
+
+:root {
+    --base-color: rgba(255, 255, 255, 0.1);
+    --hover-color: rgba(220, 120, 150, 1);
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+            align-items: end;
+    font-family: 'Anton', sans-serif;
+  }
+  
+.vertical {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+    position: relative;
+    width: 200px;
+    height: 60px;
+    margin: 10px 10px 50px 10px;
+    bottom: 0;
+    border: 7px solid;
+    border-image: url(img/noise.gif) 30 stretch;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  .vertical > .text {
+    position: relative;
+    color: transparent;
+    background-repeat: repeat;
+    background-size: 100% 200%;
+    background-position: 0 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    background: url(img/noise.gif) no-repeat;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+
+    -webkit-transition: background-position 300ms;
+    transition: background-position 300ms;
+  }
+  .vertical::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--base-color);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: scale3d(1, 0, 1);
+            transform: scale3d(1, 0, 1);
+    -webkit-transition: -webkit-transform 300ms;
+    transition: -webkit-transform 300ms;
+    transition: transform 300ms;
+    transition: transform 300ms, -webkit-transform 300ms;
+  }
+  .vertical:hover .text {
+    background-position: 0 100%;
+  }
+  .vertical:hover::before {
+    -webkit-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  a {
+      text-decoration: none;
+  }
+  
