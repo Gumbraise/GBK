@@ -1,6 +1,6 @@
 html, body {
     background-color: #000;
-    background: url(img/banner1.jpg) no-repeat center fixed; -webkit-background-size: cover; background-size: cover;
+    background: url(img/background.gif) no-repeat center fixed; -webkit-background-size: cover; background-size: cover;
     overflow: hidden;
 
 }
